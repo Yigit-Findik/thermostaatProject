@@ -9,9 +9,8 @@ public class thermostaat
     public static void main(String[] args) {
 
         while (z == 1) {
-            thermostaat test = new thermostaat();
-
-            test.thermostaatMenu();
+            thermostaat starter = new thermostaat();
+            starter.thermostaatMenu();
         }
     }
     boolean operational;
@@ -75,13 +74,15 @@ public class thermostaat
 
         switch (scannerValue) {
             case 1 -> {
-                thermostaat.onOff = 0;
+                onOff = 0;
             }
             case 2 -> {
-                thermostaat.onOff = 1;
+                onOff = 1;
             }
             case 3 -> {
-
+                thermostaat test2 = new thermostaat();
+                test2.setCurTemp(500);
+                test2.Outputter();
             }
 
             default -> {
