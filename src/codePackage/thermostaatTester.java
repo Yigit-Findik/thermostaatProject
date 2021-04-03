@@ -11,7 +11,7 @@ public class thermostaatTester {
         while (z == 1) {
             thermostaat test = new thermostaat();
 
-            test.thermostaatMenu(onOff);
+            test.thermostaatMenu();
         }
     }
 }

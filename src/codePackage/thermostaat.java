@@ -3,6 +3,17 @@ import java.util.Scanner;
 
 public class thermostaat
 {
+    public static int z = 1;
+    public static int onOff = 1;
+
+    public static void main(String[] args) {
+
+        while (z == 1) {
+            thermostaat test = new thermostaat();
+
+            test.thermostaatMenu();
+        }
+    }
     boolean operational;
     boolean progActive;
     float minTemp;
@@ -38,9 +49,9 @@ public class thermostaat
         this.nightTemp = nightTemp;
         this.dayTemp = dayTemp;
     }
-    
+
     //methods
-    public void thermostaatMenu(int onOff) {
+    public void thermostaatMenu() {
 
         if (onOff == 0 || onOff == 1){
 
@@ -81,20 +92,14 @@ public class thermostaat
     }// einde methode thermostaatmenu
 
     public void Outputter(){
+        System.out.println("============================");
         System.out.println("progActive                 :  "  + this.progActive);
         System.out.println("Minimum temprature         :  " + this.minTemp);
         System.out.println("Maximum temprature         :  " + this.maxTemp);
         System.out.println("Current temprature         :  " + this.curTemp);
         System.out.println("Step size                  :  " + this.stepSize);
         System.out.println("Night temprature           :  " + this.nightTemp);
-
-    }
-
-
-    public void thermostaatHulp() {
-        System.out.println("==========================================================\r\n" +
-                "|   Write true or false to turn the thermostat on or off   |\r\n" +
-                "==========================================================");
+        System.out.println("============================");
     }
 
     public void addHistory(float temp) {
