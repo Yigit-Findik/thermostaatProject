@@ -4,33 +4,28 @@ import java.util.*;
 public class thermostaatTester {
 
     public static void main(String[] args) {
-        /*
-        Scanner in = new Scanner(System.in);
+        int z = 1;
+        boolean onOrOff;
 
-        float test = in.nextFloat();
+        while (z == 1) {
+            thermostaat test = new thermostaat();
 
-        thermostaat object1 = new thermostaat();
-        thermostaat terk = new thermostaat();
+            test.thermostaatHulp();
 
-        object1.setCurTemp(test);
+            Scanner in = new Scanner(System.in);
+            onOrOff = in.nextBoolean();
 
-        System.out.println(object1);
+            if (onOrOff == false){
+                System.out.println("Thermostat turned off! \r\n");
+                z = 0;
+            }
+            else if (onOrOff == true){
+                System.out.println("Thermostat turned on!");
+                test.thermostaatMenu();
+            }
 
-        terk.thermostaatSwitch();
-        */
-        thermostaat terk = new thermostaat();
-        boolean onOrOff = false;
-        if (onOrOff == false) {
-            System.out.println("Thermostat turned off!");
         }
-        else if(onOrOff == true) {
-            System.out.println("Thermostat turned on!");
-        }
-        Scanner in = new Scanner(System.in);
-        onOrOff = in.nextBoolean();
 
-
-        terk.thermostaatSwitch();
     }
 
 }

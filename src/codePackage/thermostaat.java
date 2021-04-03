@@ -1,5 +1,4 @@
 package codePackage;
-import java.util.*;
 
 public class thermostaat
 {
@@ -39,16 +38,6 @@ public class thermostaat
         this.dayTemp = dayTemp;
     }
 
-    public void thermostaatSwitch() {
-        System.out.println("=========================================================\r\n" +
-                           "|                  Yigit's Thermostat                     |\r\n" +
-                           "|                                                         |\r\n" +
-                           "|                                                         |\r\n" +
-                           "|                                                         |\r\n" +
-                           "|                                                         |\r\n" +
-                           "=========================================================");
-    }
-
     /*
     System.out.println("OFF");
         Scanner input = new Scanner(System.in);
@@ -61,6 +50,22 @@ public class thermostaat
      */
 
     //methods
+    public void thermostaatMenu() {
+        System.out.println("=========================================================\r\n" +
+                "|                  Yigit's Thermostat                     |\r\n" +
+                "|    1.Turn off                                           |\r\n" +
+                "|    2.Turn on                                            |\r\n" +
+                "|    3.Show current system                                |\r\n" +
+                "|                                                         |\r\n" +
+                "=========================================================");
+    }
+
+    public void thermostaatHulp() {
+        System.out.println("==========================================================\r\n" +
+                "|   Write true or false to turn the thermostat on or off   |\r\n" +
+                "==========================================================");
+    }
+
     public void addHistory(float temp) {
         try {
             //for () {
@@ -72,7 +77,7 @@ public class thermostaat
         }
     }
 
-    public int setStepSize() {
+    public void setStepSize() {
         try {
 
         }
