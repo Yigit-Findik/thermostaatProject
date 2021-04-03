@@ -1,4 +1,5 @@
 package codePackage;
+import java.util.Scanner;
 
 public class thermostaat
 {
@@ -50,15 +51,54 @@ public class thermostaat
      */
 
     //methods
-    public void thermostaatMenu() {
-        System.out.println("=========================================================\r\n" +
+    public void thermostaatMenu(int onOff) {
+
+        if (onOff == 0 || onOff == 1){
+
+            System.out.println("=========================================================\r\n" +
                 "|                  Yigit's Thermostat                     |\r\n" +
                 "|    1.Turn off                                           |\r\n" +
                 "|    2.Turn on                                            |\r\n" +
-                "|    3.Show current system                                |\r\n" +
-                "|                                                         |\r\n" +
-                "=========================================================");
+                "|    3.Show current system                                |\r\n" );
+                if (onOff == 1) {
+                    System.out.println("|     Online                                              |\r\n");
+                }
+                else if (onOff == 0) {
+                    System.out.println("|     Offline                                             |\r\n");
+                }
+                System.out.println("=========================================================");
+        }
+
+        Scanner scan = new Scanner(System.in);
+        int scannerValue;
+        scannerValue = scan.nextInt();
+
+        switch (scannerValue) {
+            case 1 -> {
+                thermostaatTester.onOff = 0;
+            }
+            case 2 -> {
+                thermostaatTester.onOff = 1;
+            }
+            case 3 -> {
+
+            }
+
+            default -> {
+                System.out.println("Not possible!");
+                thermostaatTester.onOff = 100;
+            }
+        }
+    }// einde methode thermostaatmenu
+
+    public void Outputter(){
+        System.out.println("progActive                 :" + " " + this.progActive);
+        System.out.println("Minimum temprature         :" + " " + this.minTemp);
+        System.out.println("Maximum temprature         :" + " " + this.maxTemp);
+        System.out.println("Prijs/Price             : " + this.price + " € (EUR)");
+        System.out.println("Amount/Aantal voorraad  : " + this.stocked);
     }
+
 
     public void thermostaatHulp() {
         System.out.println("==========================================================\r\n" +
