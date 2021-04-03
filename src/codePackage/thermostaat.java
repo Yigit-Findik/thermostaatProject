@@ -38,18 +38,7 @@ public class thermostaat
         this.nightTemp = nightTemp;
         this.dayTemp = dayTemp;
     }
-
-    /*
-    System.out.println("OFF");
-        Scanner input = new Scanner(System.in);
-        if (input.nextBoolean() == true) {
-            System.out.println("thermostat is turned on!");
-        }
-        else if (input.nextBoolean() == false){
-            System.out.println("thermostat is turned off!");
-        }
-     */
-
+    
     //methods
     public void thermostaatMenu(int onOff) {
 
@@ -92,11 +81,13 @@ public class thermostaat
     }// einde methode thermostaatmenu
 
     public void Outputter(){
-        System.out.println("progActive                 :" + " " + this.progActive);
-        System.out.println("Minimum temprature         :" + " " + this.minTemp);
-        System.out.println("Maximum temprature         :" + " " + this.maxTemp);
-        System.out.println("Prijs/Price             : " + this.price + " € (EUR)");
-        System.out.println("Amount/Aantal voorraad  : " + this.stocked);
+        System.out.println("progActive                 :  "  + this.progActive);
+        System.out.println("Minimum temprature         :  " + this.minTemp);
+        System.out.println("Maximum temprature         :  " + this.maxTemp);
+        System.out.println("Current temprature         :  " + this.curTemp);
+        System.out.println("Step size                  :  " + this.stepSize);
+        System.out.println("Night temprature           :  " + this.nightTemp);
+
     }
 
 
