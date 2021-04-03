@@ -39,8 +39,18 @@ public class thermostaat
         this.dayTemp = dayTemp;
     }
 
-    public boolean thermostaatSwitch() {
-        System.out.println("OFF");
+    public void thermostaatSwitch() {
+        System.out.println("=========================================================\r\n" +
+                           "|                  Yigit's Thermostat                     |\r\n" +
+                           "|                                                         |\r\n" +
+                           "|                                                         |\r\n" +
+                           "|                                                         |\r\n" +
+                           "|                                                         |\r\n" +
+                           "=========================================================");
+    }
+
+    /*
+    System.out.println("OFF");
         Scanner input = new Scanner(System.in);
         if (input.nextBoolean() == true) {
             System.out.println("thermostat is turned on!");
@@ -48,7 +58,7 @@ public class thermostaat
         else if (input.nextBoolean() == false){
             System.out.println("thermostat is turned off!");
         }
-    }
+     */
 
     //methods
     public void addHistory(float temp) {
@@ -62,7 +72,7 @@ public class thermostaat
         }
     }
 
-    public void setStepSize() {
+    public int setStepSize() {
         try {
 
         }
@@ -95,6 +105,7 @@ public class thermostaat
     public float[] getHistory() {
         return history;
     }
+
     //setters (mogelijk) nodig zou zijn.
     public void setCurTemp(float curTemp) {
         this.curTemp = curTemp;

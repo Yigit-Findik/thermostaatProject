@@ -19,9 +19,18 @@ public class thermostaatTester {
         terk.thermostaatSwitch();
         */
         thermostaat terk = new thermostaat();
-        if (terk.thermostaatSwitch() == true) {
-
+        boolean onOrOff = false;
+        if (onOrOff == false) {
+            System.out.println("Thermostat turned off!");
         }
+        else if(onOrOff == true) {
+            System.out.println("Thermostat turned on!");
+        }
+        Scanner in = new Scanner(System.in);
+        onOrOff = in.nextBoolean();
+
+
+        terk.thermostaatSwitch();
     }
 
 }
