@@ -75,10 +75,10 @@ public class thermostaat
 
         switch (scannerValue) {
             case 1 -> {
-                thermostaatTester.onOff = 0;
+                thermostaat.onOff = 0;
             }
             case 2 -> {
-                thermostaatTester.onOff = 1;
+                thermostaat.onOff = 1;
             }
             case 3 -> {
 
