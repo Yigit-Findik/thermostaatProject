@@ -38,8 +38,7 @@ public class thermostaat
     }
 
     //constructor with parameters
-    public thermostaat(boolean operational, boolean progActive, float minTemp, float maxTemp, float curTemp, float stepSize, float nightTemp, float dayTemp) {
-        this.operational = operational;
+    public thermostaat(boolean progActive, float minTemp, float maxTemp, float curTemp, float stepSize, float nightTemp, float dayTemp) {
         this.progActive = progActive;
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
