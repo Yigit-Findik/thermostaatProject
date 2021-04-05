@@ -9,6 +9,9 @@ public class thermostaat
     public static void main(String[] args) {
 
         while (z == 1) {
+            thermostaat testing = new thermostaat(true, 2.20f,30.00f,15.00f,2.50f, 12.00f, 12.00f);
+            System.out.println(testing.progActive);
+
             thermostaat starter = new thermostaat();
             starter.thermostaatMenu();
         }
