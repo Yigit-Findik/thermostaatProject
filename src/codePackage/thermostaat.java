@@ -110,7 +110,7 @@ public class thermostaat
         System.out.println("Step size                  :  " + this.stepSize);
         System.out.println("Night temprature           :  " + this.nightTemp);
         System.out.println("============================\r\n");
-        System.out.println("Write anything");
+        System.out.println("Write 'Continue' to go back to the menu!");
         global.nextLine();
 
     }
