@@ -26,6 +26,7 @@ public class thermostaat
     float dayTemp;
 
     float history[] = new float[10];
+    Scanner global = new Scanner(System.in);
 
 
     //constructor with no parameters
@@ -53,48 +54,54 @@ public class thermostaat
 
     //methods
     public void thermostaatMenu() {
+        try
+        {
+            if (onOff == 0 || onOff == 1) {
 
-        if (onOff == 0 || onOff == 1){
-
-            System.out.println("=========================================================\r\n" +
-                "|                  Yigit's Thermostat                     |\r\n" +
-                "|    1.Turn off                                           |\r\n" +
-                "|    2.Turn on                                            |\r\n" +
-                "|    3.Show current system                                |\r\n" );
+                System.out.println("=========================================================\r\n" +
+                        "|                  Yigit's Thermostat                     |\r\n" +
+                        "|    1.Turn off                                           |\r\n" +
+                        "|    2.Turn on                                            |\r\n" +
+                        "|    3.Show current system                                |\r\n");
                 if (onOff == 1) {
                     System.out.println("|     Online                                              |\r\n");
-                }
-                else if (onOff == 0) {
+                } else if (onOff == 0) {
                     System.out.println("|     Offline                                             |\r\n");
                 }
                 System.out.println("=========================================================");
+            }
+
+            Scanner scan = new Scanner(System.in);
+            int scannerValue;
+            scannerValue = scan.nextInt();
+
+            switch (scannerValue) {
+                case 1 -> {
+                    onOff = 0;
+                }
+
+                case 2 -> {
+                    onOff = 1;
+                }
+
+                case 3 -> {
+                    thermostaat test2 = new thermostaat();
+                    test2.setCurTemp(500);
+                    test2.SysOutputter();
+                }
+
+                default -> {
+                    System.out.println("Not possible!");
+                    thermostaatTester.onOff = 100;
+                }
+            }
         }
-
-        Scanner scan = new Scanner(System.in);
-        int scannerValue;
-        scannerValue = scan.nextInt();
-
-        switch (scannerValue) {
-            case 1 -> {
-                onOff = 0;
-            }
-            case 2 -> {
-                onOff = 1;
-            }
-            case 3 -> {
-                thermostaat test2 = new thermostaat();
-                test2.setCurTemp(500);
-                test2.Outputter();
-            }
-
-            default -> {
-                System.out.println("Not possible!");
-                thermostaatTester.onOff = 100;
-            }
+        catch(Exception e){
+            System.out.println("You can only use int input, original error code: " + e);
         }
     }// einde methode thermostaatmenu
 
-    public void Outputter(){
+    public void SysOutputter(){
         System.out.println("============================");
         System.out.println("progActive                 :  "  + this.progActive);
         System.out.println("Minimum temprature         :  " + this.minTemp);
@@ -102,7 +109,10 @@ public class thermostaat
         System.out.println("Current temprature         :  " + this.curTemp);
         System.out.println("Step size                  :  " + this.stepSize);
         System.out.println("Night temprature           :  " + this.nightTemp);
-        System.out.println("============================");
+        System.out.println("============================\r\n");
+        System.out.println("Write anything");
+        global.nextLine();
+
     }
 
     public void addHistory(float temp) {
